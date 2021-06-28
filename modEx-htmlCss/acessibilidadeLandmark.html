@@ -8,7 +8,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
 
-        <script type="text/javascript" src="scripts/script.js"></script>
+        <!--<script type="text/javascript" src="scripts/script.js"></script>-->
 
         <title>Página para exercícios HTML</title>
     </head>
@@ -35,11 +35,23 @@
         <!-- Cabeçalho fim-->
         <!-- Conteúdo principal -->
         <main role="main">
+            <p id="article-description">
+                Baby Yoda é um membro pqueno da mesma espécie alienígena sem nome 
+                dos personagens de Star Wars Yoda e Yaddle, com quem ele compartilha 
+                uma forte habilidade na Força.
+            </p>
+
             <p>
                 Baby Yoda é um membro pqueno da mesma espécie alienígena sem nome 
                 dos personagens de Star Wars Yoda e Yaddle, com quem ele compartilha 
                 uma forte habilidade na Força.
             </p>
+
+            <script type="text/javascript">
+                var paragrafo = document.getElementById("article-description");
+                paragrafo.style.color="blue";
+                paragrafo.innerText="Texto mudou!";
+            </script>
 
             <button aria-label="Acesse o site oficial da Marvel para saber mais sobre o baby Yoda" aria-labelledby="bsite">Saber mais</button>
 

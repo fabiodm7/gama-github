@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Texto descritivo da página web"/>
+        <meta name="author" content="Fabio Medina"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+
+        <script type="text/javascript" src="scripts/script.js"></script>
+
+        <title>Página para exercícios HTML</title>
+    </head>
+    <body>
+        <!-- Cabeçalho -->
+        <header>
+
+        </header>
+        <!-- Cabeçalho fim-->
+        <!-- Conteúdo principal -->
+        <main role="main">
+            <form action="#" method="POST">
+                <label for="campo1">Nome</label>
+
+                <input type="text" name="nome" id="campo1"/>
+                
+                <label for="campo2">Interesses de estudo</label>
+                
+                <select name="interesses" id="campo2">
+                    <option value="1">Vendas</option>
+                    <option value="2">Marketing</option>
+                </select>
+                
+                <fieldset>
+                    <legend>Interesses de estudo</legend>
+                    
+                    <label for="campo31">Vendas</label>
+                    <input type="radio" name="interesses2" value="1" id="campo31"/>
+                    
+                    <label for="campo32">Marketing</label>
+                    <input type="radio" name="interesses2" value="2" id="campo32"/>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesses de estudo 2</legend>
+                    
+                    <label for="campo41">Vendas</label>
+                    <input type="checkbox" name="interesses2" value="1" id="campo41"/>
+                    
+                    <label for="campo42">Marketing</label>
+                    <input type="checkbox" name="interesses2" value="2" id="campo42"/>
+                </fieldset>
+
+                <!--<label>Interesses de estudo</label>
+                
+                <label>Vendas</label>
+                <input type="radio" name="interesses2" value="1"/>
+                
+                <label>Marketing</label>
+                <input type="radio" name="interesses2" value="2"/>
+                
+                <label>Vendas</label>
+                <input type="checkbox" name="interesses3" value="1"/>
+                
+                <label>Marketing</label>
+                <input type="checkbox" name="interesses3" value="2"/>-->
+                
+                <input type="submit" value="Enviar formulário"/>
+            </form>
+        </main>
+        <!-- Conteúdo principal fim -->
+        <!-- Rodapé -->
+        <footer>
+
+        </footer>
+        <!-- Rodapé fim -->
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Texto descritivo da página web"/>
+        <meta name="author" content="Fabio Medina"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+
+        <script type="text/javascript" src="scripts/script.js"></script>
+
+        <title>Página para exercícios HTML</title>
+    </head>
+    <body>
+        <!-- Cabeçalho -->
+        <header role="banner">
+            <nav role="navigation" aria-level="main navigation">
+                <ul role="menu">
+                    <li>
+                        <a href="#" role="menuitem">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" role="menuitem">Quem somos</a>
+                    </li>
+                    <li>
+                        <a href="#" role="menuitem">Contato</a>
+                    </li>
+                    <li>
+                        <a href="#" role="menuitem">Conteúdos</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Cabeçalho fim-->
+        <!-- Conteúdo principal -->
+        <main role="main">
+            <p>
+                Baby Yoda é um membro pqueno da mesma espécie alienígena sem nome 
+                dos personagens de Star Wars Yoda e Yaddle, com quem ele compartilha 
+                uma forte habilidade na Força.
+            </p>
+
+            <button aria-label="Acesse o site oficial da Marvel para saber mais sobre o baby Yoda" aria-labelledby="bsite">Saber mais</button>
+
+            <p id="bsite">Site do baby Yoda</p>
+
+            <p lang="en">
+                Grogu is a character from the Star Wras Disney+ original television
+                series The Mandalorian. He is a toddler member of the same unnamed alien
+                species as the Star Wars characters Yoda and Yaddle, with whom he shares
+                a strong ability in the Force.
+            </p>
+
+            <form>
+                <label>E-mail</label>
+                <input type="email" />
+
+                <label>Interesse</label>
+                <input type="radio" name="interesse" value="Vendas" />
+                <label for="s">Vendas</label>
+
+                <input type="radio" name="interesse" value="Marketing" />
+                <label for="m">Marketing</label>
+
+                <input type="radio" name="interesse" value="Programação"/>
+                <label for="l">Programação</label>
+
+                <input type="submit" value="inscrever" />
+            </form>
+        </main>
+        <!-- Conteúdo principal fim -->
+        <!-- Rodapé -->
+        <footer role="contentinfo">
+            &copy; 2021 Hiring Coders 
+        </footer>
+        <!-- Rodapé fim -->
+    </body>
+</html>

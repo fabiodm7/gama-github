@@ -41,7 +41,7 @@
                 uma forte habilidade na Força.
             </p>
 
-            <p>
+            <p id="texto1">
                 Baby Yoda é um membro pqueno da mesma espécie alienígena sem nome 
                 dos personagens de Star Wars Yoda e Yaddle, com quem ele compartilha 
                 uma forte habilidade na Força.
@@ -53,7 +53,14 @@
                 paragrafo.innerText="Texto mudou!";
             </script>
 
-            <button aria-label="Acesse o site oficial da Marvel para saber mais sobre o baby Yoda" aria-labelledby="bsite">Saber mais</button>
+            <button id="botao1" onclick="atualizacao()" aria-label="Acesse o site oficial da Marvel para saber mais sobre o baby Yoda" aria-labelledby="bsite">Saber mais</button>
+
+            <script type="text/javascript">
+                function atualizacao(){
+                    var texto1 = document.getElementById("texto1");
+                    texto1.innerText = "Star Wars!";
+                }
+            </script>
 
             <p id="bsite">Site do baby Yoda</p>
 

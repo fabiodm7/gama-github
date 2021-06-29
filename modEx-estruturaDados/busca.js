@@ -13,11 +13,15 @@ function busca(num){
 
 function buscaBin(num){
     let inicio, fim;
+    let meio;
+    let passos = 0;
     inicio = 0;
     fim = 9;
     while (inicio < fim){
-        meio = (inicio + fim)/2;
+        meio = parseInt((inicio + fim)/2);
+        passos += 1;
         if (num == valores[meio]){
+            console.log("achei em "+passos + " passos");
             return meio;
         } else {
             if ( num > valores[meio]){
@@ -27,6 +31,7 @@ function buscaBin(num){
             }
         }
     }
+    console.log("não achei");
     return -1
 }
 
@@ -36,3 +41,5 @@ console.log(busca(10));
 console.log(busca(50));
 
 console.log(buscaBin(10));
+console.log(buscaBin(60));
+console.log(buscaBin(50));

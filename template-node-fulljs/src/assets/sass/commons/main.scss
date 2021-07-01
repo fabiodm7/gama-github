@@ -10,5 +10,9 @@ $fontFamilyDefault: 'Roboto', sans-serif;
 body{
   background: $backgroudBlack;
   color: $fontColorWhite;
+  // font-family: $fontFamilyDefault;
+}
+
+h1, h2, h3, h4 {
   font-family: $fontFamilyDefault;
 }

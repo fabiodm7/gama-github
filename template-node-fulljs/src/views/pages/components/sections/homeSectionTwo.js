@@ -1,5 +1,7 @@
 let HomeSectionTwo = `
-<h1>Section Tow</h1>
+<section class="section>
+    <h2>Temporário</h2>
+</section>
 `
 
 export default HomeSectionTwo

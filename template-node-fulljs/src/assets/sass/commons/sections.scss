@@ -4,5 +4,53 @@
 }
 
 .backgroud--one{
-    background-size: contain;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .block-section--one{
+        width: 100%;
+        display: block;
+        text-align: center;
+
+        & h1{
+            font-weight: 400;
+            font-size: 22px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.backgroud--two{
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 120vh;
+    display: flex;
+
+    & .footer-contain{
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & .block-section--two{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        & .text-block-two{
+            width: 40%;
+            height: 100%;
+            & img{
+                margin: 90px 0px 0px 90px;
+            }
+        }
+    }
 }

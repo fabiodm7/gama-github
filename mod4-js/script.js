@@ -187,50 +187,87 @@
 
 // console.log(sum(40,60));
 
-// classes
-class Book {
-    constructor(title, author,pages){
-        this.title = title;
-        this.author = author;
-        this.pages = pages;
-    }
+// // classes
+// class Book {
+//     constructor(title, author,pages){
+//         this.title = title;
+//         this.author = author;
+//         this.pages = pages;
+//     }
 
-    read(){
-        return `Estou lendo ${this.title} de ${this.author}`
+//     read(){
+//         return `Estou lendo ${this.title} de ${this.author}`
+//     }
+// }
+
+// let book = new Book('Algoritmos para viver', 'Brian', 500);
+// console.log(book);
+// console.log(book.read());
+
+// let otherBook = new Book('Um fulano','beltrano',100);
+// console.log(book,otherBook);
+
+// class ITBook extends Book{
+//     constructor(title, author, pages,technology){
+//         super(title, author, pages);
+//         this.technology = technology;
+//     }
+// }
+
+// let itBook = new ITBook('Algoritmos para viver', 'Brian', 500,'Algoritmos')
+// console.log(itBook.read());
+
+// class Person {
+//     constructor(name){
+//         this._name = name;
+//     }
+
+//     get name(){
+//         return this._name;
+//     }
+
+//     set name(value){
+//         this._name = value;
+//     }
+// }
+
+// let person = new Person('Fabio');
+// person.name = 'Medina';
+// console.log(person.name);
+
+// Exercícios
+// FizzBuzz
+// Divisivel por 3 => 'Fizz',
+// Divisivel por 5 => 'Buzz',
+// Divisivel por 3 e 5 => 'FizzBuzz',
+// se não for um número => 'não é um número'
+// se não for divisível nem por 3 nem por 5 => entrada
+
+function fizzBuzz(entrada) {
+    if (typeof entrada !== 'number') {
+        return 'Não é um número';
+    } else if (entrada % 3 == 0 && entrada % 5 == 0) {
+        return 'FizzBuzz' ;
+    } else if (entrada % 3 == 0) {
+        return 'Fizz';
+    } else if (entrada % 5 == 0) {
+        return 'Buzz';
+    } else {
+        return entrada;
     }
 }
 
-let book = new Book('Algoritmos para viver', 'Brian', 500);
-console.log(book);
-console.log(book.read());
+let resultado = fizzBuzz('11');
+console.log(resultado);
 
-let otherBook = new Book('Um fulano','beltrano',100);
-console.log(book,otherBook);
+resultado = fizzBuzz(3);
+console.log(resultado);
 
-class ITBook extends Book{
-    constructor(title, author, pages,technology){
-        super(title, author, pages);
-        this.technology = technology;
-    }
-}
+resultado = fizzBuzz(5);
+console.log(resultado);
 
-let itBook = new ITBook('Algoritmos para viver', 'Brian', 500,'Algoritmos')
-console.log(itBook.read());
+resultado = fizzBuzz(14);
+console.log(resultado);
 
-class Person {
-    constructor(name){
-        this._name = name;
-    }
-
-    get name(){
-        return this._name;
-    }
-
-    set name(value){
-        this._name = value;
-    }
-}
-
-let person = new Person('Fabio');
-person.name = 'Medina';
-console.log(person.name);
+resultado = fizzBuzz(15);
+console.log(resultado);

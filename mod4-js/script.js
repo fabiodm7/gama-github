@@ -133,3 +133,36 @@
 //     default:
 //         console.log("nenhum atendido")
 // }
+
+// // repetição for, while, do while
+// var colors = ["black","white","yellow","green","blue"];
+
+// for (var i = 0; i < colors.length; i++){
+//     console.log(colors[i])
+// }
+
+// for (var i = 0; i < 10; i++){
+//     console.log(i);
+// }
+
+// for (var i = 1; i <= 10; i++){
+//     console.log(i);
+// }
+
+// var i = 0;
+// while (1 < 10) {
+//     console.log(i);
+//     i++;
+// }
+
+// var i = 1;
+// while (1 <= 10) {
+//     console.log(i);
+//     i++;
+// }
+
+// var i = 1;
+// do {
+//     console.log(i);
+//     i++;
+// } while ( i < 10 );

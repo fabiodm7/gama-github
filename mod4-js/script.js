@@ -287,11 +287,12 @@
 
 // console.log(resultado)
 
-// Convert celsius to fahrenheit
+// // Convert celsius to fahrenheit
 
-function convertFahrenheit(value) {
-    return (value * 9/5) + 32;
-}
+// function convertFahrenheit(value) {
+//     return (value * 9/5) + 32;
+// }
 
-let resultado = convertFahrenheit(10);
-console.log(resultado)
+// let resultado = convertFahrenheit(10);
+// console.log(resultado)
+

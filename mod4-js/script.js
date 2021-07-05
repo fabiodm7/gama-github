@@ -166,3 +166,23 @@
 //     console.log(i);
 //     i++;
 // } while ( i < 10 );
+
+// funções
+function sayHello(){
+    console.log("Hello");
+}
+
+sayHello();
+
+function sayHello2(name, lastName){
+    console.log("Hello " + name + " " + lastName);
+}
+
+sayHello2();
+sayHello2("Fabio", "Medina");
+
+function sum(a,b){
+    return a + b;
+}
+
+console.log(sum(40,60));

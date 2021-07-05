@@ -106,30 +106,30 @@
 // // ou ||
 // // negação !
 
-// condicionais
+// // condicionais if, else if, switch
 
-var num = 5
+// var num = 5
 
-if (num === 1){
-    console.log("num é igual a 1")
-} else if(num === 2){
-    console.log("num é igual 2")
-} else {
-    console.log("não é 1 nem 2")
-}
+// if (num === 1){
+//     console.log("num é igual a 1")
+// } else if(num === 2){
+//     console.log("num é igual 2")
+// } else {
+//     console.log("não é 1 nem 2")
+// }
 
-var mes = "janeiro"
+// var mes = "janeiro"
 
-switch (mes) {
-    case "fevereiro":
-        console.log("mes 2")
-        break
-    case "março":
-        console.log("mes 1")
-        break
-    case "janeiro":
-        console.log("mes 1")
-        break
-    default:
-        console.log("nenhum atendido")
-}
+// switch (mes) {
+//     case "fevereiro":
+//         console.log("mes 2")
+//         break
+//     case "março":
+//         console.log("mes 1")
+//         break
+//     case "janeiro":
+//         console.log("mes 1")
+//         break
+//     default:
+//         console.log("nenhum atendido")
+// }

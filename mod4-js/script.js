@@ -235,39 +235,63 @@
 // person.name = 'Medina';
 // console.log(person.name);
 
-// Exercícios
-// FizzBuzz
-// Divisivel por 3 => 'Fizz',
-// Divisivel por 5 => 'Buzz',
-// Divisivel por 3 e 5 => 'FizzBuzz',
-// se não for um número => 'não é um número'
-// se não for divisível nem por 3 nem por 5 => entrada
+// // Exercícios
+// // FizzBuzz
+// // Divisivel por 3 => 'Fizz',
+// // Divisivel por 5 => 'Buzz',
+// // Divisivel por 3 e 5 => 'FizzBuzz',
+// // se não for um número => 'não é um número'
+// // se não for divisível nem por 3 nem por 5 => entrada
 
-function fizzBuzz(entrada) {
-    if (typeof entrada !== 'number') {
-        return 'Não é um número';
-    } else if (entrada % 3 == 0 && entrada % 5 == 0) {
-        return 'FizzBuzz' ;
-    } else if (entrada % 3 == 0) {
-        return 'Fizz';
-    } else if (entrada % 5 == 0) {
-        return 'Buzz';
-    } else {
-        return entrada;
-    }
+// function fizzBuzz(entrada) {
+//     if (typeof entrada !== 'number') {
+//         return 'Não é um número';
+//     } else if (entrada % 3 == 0 && entrada % 5 == 0) {
+//         return 'FizzBuzz' ;
+//     } else if (entrada % 3 == 0) {
+//         return 'Fizz';
+//     } else if (entrada % 5 == 0) {
+//         return 'Buzz';
+//     } else {
+//         return entrada;
+//     }
+// }
+
+// let resultado = fizzBuzz('11');
+// console.log(resultado);
+
+// resultado = fizzBuzz(3);
+// console.log(resultado);
+
+// resultado = fizzBuzz(5);
+// console.log(resultado);
+
+// resultado = fizzBuzz(14);
+// console.log(resultado);
+
+// resultado = fizzBuzz(15);
+// console.log(resultado);
+
+// // Reverse a string
+
+// let newStr = '';
+
+// function reverseString(str) {
+//     for (let i = str.length - 1; i >= 0; i--){
+//         newStr += str[i];
+//     }
+//     return newStr;
+// }
+
+// let resultado = reverseString('Fabio Duarte Medina')
+
+// console.log(resultado)
+
+// Convert celsius to fahrenheit
+
+function convertFahrenheit(value) {
+    return (value * 9/5) + 32;
 }
 
-let resultado = fizzBuzz('11');
-console.log(resultado);
-
-resultado = fizzBuzz(3);
-console.log(resultado);
-
-resultado = fizzBuzz(5);
-console.log(resultado);
-
-resultado = fizzBuzz(14);
-console.log(resultado);
-
-resultado = fizzBuzz(15);
-console.log(resultado);
+let resultado = convertFahrenheit(10);
+console.log(resultado)

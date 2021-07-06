@@ -85,46 +85,62 @@
 
 // console.log(soma)
 
-// Objetos Destructuring
-const pessoa = {
-    nome: "Fabio",
-    idade: 31,
-    cidade: "Sao Paulo"
-}
+// // Objetos Destructuring
+// const pessoa = {
+//     nome: "Fabio",
+//     idade: 31,
+//     cidade: "Sao Paulo"
+// }
 
-// notação de ponto
-console.log(pessoa.nome) //Fabio
+// // notação de ponto
+// console.log(pessoa.nome) //Fabio
 
-// notação de colchetes
-console.log(pessoa["idade"]) //31
+// // notação de colchetes
+// console.log(pessoa["idade"]) //31
 
-// Desestruturar objetos
-const {nome,idade,cidade} = pessoa
-console.log(nome)
-console.log(idade)
-console.log(cidade)
+// // Desestruturar objetos
+// const {nome,idade,cidade} = pessoa
+// console.log(nome)
+// console.log(idade)
+// console.log(cidade)
 
-const filmes = [
-    {
-        id:'1',
-        titulo: 'teste 1',
-        descricao: 'bla bla bla bla bla',
-        duracao: 120
-    },
-    {
-        id:'2',
-        titulo: 'teste 2',
-        descricao: 'ble ble ble ble ble',
-        duracao: 120
-    },
-    {
-        id:'3',
-        titulo: 'teste 3',
-        descricao: 'bli bli bli bli bli',
-        duracao: 120
-    }
-]
+// const filmes = [
+//     {
+//         id:'1',
+//         titulo: 'teste 1',
+//         descricao: 'bla bla bla bla bla',
+//         duracao: 120
+//     },
+//     {
+//         id:'2',
+//         titulo: 'teste 2',
+//         descricao: 'ble ble ble ble ble',
+//         duracao: 120
+//     },
+//     {
+//         id:'3',
+//         titulo: 'teste 3',
+//         descricao: 'bli bli bli bli bli',
+//         duracao: 120
+//     }
+// ]
 
-const [{id,titulo,descricao,duracao}] = filmes
+// const [{id,titulo,descricao,duracao}] = filmes
 
-filmes.map(filme => console.log(filme.descricao))
+// filmes.map(filme => console.log(filme.descricao))
+
+// SPA, PWA e Webcomponents
+// SPA - Single pages applications
+// não renderiza a página inteira, apenas partes Dilema
+// angular, react são js based
+
+// PWA - Programming web apps
+// experiência de navegador como aplicativo
+// aproveita grande parte do código em JS
+
+// Webcomponents
+// códigos menores, modulares e reutilizáveis
+// custom elements
+// shadow down
+// html templates
+// html imports

@@ -20,7 +20,7 @@ const livros = [
     { 
         id: 3,
         nome: "As veias abertas da américa latina",
-        autor:"Eduardo galeano",
+        autor:"Eduardo Galeano",
         categoria: "Américas",
         paginas: 400,
         recomenda: false,

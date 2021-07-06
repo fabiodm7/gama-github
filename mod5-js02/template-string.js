@@ -23,19 +23,19 @@
 // console.log(calculaIdade(id))
 // console.log(calculaIdade2(id))
 
-// Arrow functions
-// para funções anonimas ou funções de callback, funções utilizadas como parâmetros
+// // Arrow functions
+// // para funções anonimas ou funções de callback, funções utilizadas como parâmetros
 
-function soma(a,b){
-    return a + b
-}
+// function soma(a,b){
+//     return a + b
+// }
 
-console.log(soma(3,5)) //8
+// console.log(soma(3,5)) //8
 
-// ===
+// // ===
 
-const soma2 = (num1,num2) => num1 + num2
+// const soma2 = (num1,num2) => num1 + num2
 
-const sayHello = name => `Hello ${name}`
+// const sayHello = name => `Hello ${name}`
 
-console.log(sayHello('Fabio'))
+// console.log(sayHello('Fabio'))

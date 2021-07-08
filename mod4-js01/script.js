@@ -331,7 +331,3 @@ function clearElement(element) {
         element.removeChild(element.firstChild)
     }
 }
-ashdkjashdkasjdhaksjdas
-daskjdhaskdjhaskjdhasd
-dahsdjashdkjashdkjashdkas
-daskdbaskjdas

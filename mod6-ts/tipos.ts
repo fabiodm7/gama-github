@@ -62,3 +62,10 @@ function erro(mensagem:string):never{
 function falha(){
     return erro('Algo falhou');
 }
+
+// union types
+const notas: number | string = 5;
+function exibibeNota(nota: number | string | boolean){
+    console.log(`A nota é ${nota}`)
+}
+

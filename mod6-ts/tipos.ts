@@ -69,3 +69,27 @@ function exibibeNota(nota: number | string | boolean){
     console.log(`A nota é ${nota}`)
 }
 
+// alias
+type Funcionario = {
+    nome: string,
+    sobrenome:string,
+    dataNascimento: Date,
+}
+//type Funcionarios = Array<string>;
+const funcionarios: Funcionario[] = [
+    {
+        nome:'fabio',
+        sobrenome:'medina',
+        dataNascimento: new Date()
+    },
+    {
+        nome:'stephanie',
+        sobrenome:'medina',
+        dataNascimento: new Date()
+    }
+]
+function tratarFuncionarios(funcionarios: Funcionario[]){
+    for(let funcionario of funcionarios){
+        console.log('Nome do funcionário: ',funcionario.nome)
+    }
+}

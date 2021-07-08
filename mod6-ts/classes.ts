@@ -18,3 +18,34 @@ console.log(data.mes);
 const data2 = new Data(1,1);
 
 //typescript playground
+
+class Carro {
+    private velocidadeAtual: number = 0;
+
+    constructor(
+        public marca: string,
+        public modelo: string,
+        private velocidadeMaxima: number = 220
+    ){}
+
+    private alterarVelocidade(delta: number){
+        // if (this.velocidadeAtual + delta <= this.velocidadeMaxima){
+        //     this.velocidadeAtual += delta;
+        // };
+        // Fazer as validações de aceleração e frenagem
+    }
+
+    acelerar(){
+//        const aceleracao = 5;
+        this.alterarVelocidade(5);
+        
+    }
+
+    frear(){
+//        const frenagem = 5;
+        this.alterarVelocidade(-5);
+    }
+}
+
+const carro = new Carro('GM','Corsa',250);
+carro.acelerar();

@@ -33,6 +33,12 @@ class Carro {
         //     this.velocidadeAtual += delta;
         // };
         // Fazer as validações de aceleração e frenagem
+        const novaVelocidade = this.velocidadeAtual + delta;
+        if (novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima){
+            this.velocidadeAtual = novaVelocidade;
+        } else {
+            this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima : 0
+        }
     }
 
     acelerar(){

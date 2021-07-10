@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// não pode usar class por ser uma palavra reservada do JS
+// quando não queremos retornar tags dentro de uma tag específica utilizamos <></>
+// 
+
+function App(props) {
+    const [ usuario, setUsuario ] = useState('fabiodm7')
+    return (
+        <>
+            <h1>{props.title} {props.user}</h1>
+            <p>{ usuario }</p>
+            <input name="usuario" id="usuario" className="usuarioInput" placeholder="Usuario"/>
+            <button type="button">Pesquisar</button>
+        </>
+    );
 }
 
 export default App;

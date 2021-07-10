@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import axios from 'axios;'
+import axios from 'axios';
 
 // não pode usar class por ser uma palavra reservada do JS
 // quando não queremos retornar tags dentro de uma tag específica utilizamos <></>
@@ -11,7 +11,7 @@ function App(props) {
     const [ usuario, setUsuario ] = useState('');
     function handlePesquisa(){
         //console.log(usuario);
-        axios.get('https://api.github.com/users/fabiodm7/repos').then(response => console.log(response));
+        axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => console.log(response.data));
     }
     return (
         <>

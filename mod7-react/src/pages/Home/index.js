@@ -3,12 +3,14 @@ import '../../App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 import * as s from './styled';
+import { useHistory } from 'react-router-dom'
 
 // não pode usar class por ser uma palavra reservada do JS
 // quando não queremos retornar tags dentro de uma tag específica utilizamos <></>
 // para importar um arquivo no diretório a sintaxe correta é ./nomeArquivo.extensao
 
 function App(props) {
+    const history = useHistory();
     const [ usuario, setUsuario ] = useState('');
     function handlePesquisa(){
         //console.log(usuario);
@@ -19,6 +21,7 @@ function App(props) {
                 repositoriesName.push(repository.name);
             });
             localStorage.setItem('repositoriesName',JSON.stringify(repositoriesName));
+            history.push('/repositories');
         });
     }
     return (

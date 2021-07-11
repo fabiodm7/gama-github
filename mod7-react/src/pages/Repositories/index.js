@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as s from './styled';
+// import { Link } from 'react-router-dom';
 
 export default function Repositories(){
     const [ repositories, setRepositories ] = useState([]);
@@ -7,7 +8,7 @@ export default function Repositories(){
         let repositoriesName = localStorage.getItem('repositoriesName');
         repositoriesName = JSON.parse(repositoriesName);
         setRepositories(repositoriesName);
-        localStorage.clear();
+        // localStorage.clear();
     },[]);
     return(
         <s.Container>
@@ -19,6 +20,7 @@ export default function Repositories(){
                     )
                 }) }
             </s.List>
+            <s.linkHome to="/">Voltar</s.linkHome>
         </s.Container>
     )
 }

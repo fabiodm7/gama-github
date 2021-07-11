@@ -1,7 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../../logo.svg';
+import '../../App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
+import * as s from './styled';
 
 // não pode usar class por ser uma palavra reservada do JS
 // quando não queremos retornar tags dentro de uma tag específica utilizamos <></>
@@ -14,12 +15,10 @@ function App(props) {
         axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => console.log(response.data));
     }
     return (
-        <>
-            <h1>{props.title} {props.user}</h1>
-            <p>{ usuario }</p>
-            <input className="usuarioInput" placeholder="Usuario" value={usuario} onChange={e => setUsuario(e.target.value)}/>
-            <button type="button" onClick={handlePesquisa}>Pesquisar</button>
-        </>
+        <s.Container>
+            <s.Input className="usuarioInput" placeholder="Usuario" value={usuario} onChange={e => setUsuario(e.target.value)}/>
+            <s.Button type="button" onClick={handlePesquisa}>Pesquisar</s.Button>
+        </s.Container>
     );
 }
 

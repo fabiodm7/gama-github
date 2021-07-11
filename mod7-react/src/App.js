@@ -1,6 +1,6 @@
 import React from 'react';
-
 import Routes from './routes';
+import './style.css'
 
 // não pode usar class por ser uma palavra reservada do JS
 // quando não queremos retornar tags dentro de uma tag específica utilizamos <></>

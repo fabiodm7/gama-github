@@ -12,23 +12,33 @@ import { useHistory } from 'react-router-dom'
 function App(props) {
     const history = useHistory();
     const [ usuario, setUsuario ] = useState('');
+    const [ erro, setErro ] = useState(false);
+
     function handlePesquisa(){
         //console.log(usuario);
-        axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => {
-            const repositories = response.data;
-            const repositoriesName = [];
-            repositories.map((repository) => {
-                repositoriesName.push(repository.name);
+        axios.get(`https://api.github.com/users/${usuario}/repos`)
+            .then(response => {
+                const repositories = response.data;
+                const repositoriesName = [];
+                repositories.map((repository) => {
+                    repositoriesName.push(repository.name);
+                });
+                localStorage.setItem('repositoriesName',JSON.stringify(repositoriesName));
+                setErro(false);
+                history.push('/repositories');
+            })
+            .catch(err => {
+                setErro(true);
             });
-            localStorage.setItem('repositoriesName',JSON.stringify(repositoriesName));
-            history.push('/repositories');
-        });
     }
     return (
-        <s.Container>
-            <s.Input className="usuarioInput" placeholder="Usuario" value={usuario} onChange={e => setUsuario(e.target.value)}/>
-            <s.Button type="button" onClick={handlePesquisa}>Pesquisar</s.Button>
-        </s.Container>
+        <s.HomeContainer>
+            <s.Content>
+                <s.Input className="usuarioInput" placeholder="Usuario" value={usuario} onChange={e => setUsuario(e.target.value)}/>
+                <s.Button type="button" onClick={handlePesquisa}>Pesquisar</s.Button>
+            </s.Content>
+            { erro ? <s.ErrorMsg>Que pena, aconteceu alguma coisa. Tente novamente.</s.ErrorMsg> : ''}
+        </s.HomeContainer>
     );
 }
 

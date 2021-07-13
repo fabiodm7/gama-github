@@ -1,0 +1,60 @@
+html,body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    font-family: sans-serif;
+}
+
+h1,h2 {
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+p {
+    color: #fff;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 600;
+}
+
+input {
+    height: 1.5rem;
+    width: 100%;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: #282c34;
+}
+
+.container {
+    min-width: 30rem;
+    padding: 0.5rem;
+}
+
+.form {
+    background-color: #5b5b5b;
+    min-width: 30rem;
+    padding: 0.5rem;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: #4CAF50;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #0023bd;
+}

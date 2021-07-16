@@ -6,42 +6,44 @@
 import express from 'express';
 // import cors from 'cors';
 import { ApolloServer, gql } from 'apollo-server-express';
-
+import typeDefs from './graphql/typeDefs'
+import resolvers from './graphql/resolvers'
 
 const app = express();
 
 const server = new ApolloServer({
-    typeDefs: gql`
-        type Client {
-            id: ID!
-            name: String!    
-        }
+    typeDefs: typeDefs,
+    // typeDefs: gql`
+    //     type Client {
+    //         id: ID!
+    //         name: String!    
+    //     }
 
-        type Demand {
-            id: ID!
-            name: String!
-            client: Client!
-            deadline: String
-        }
+    //     type Demand {
+    //         id: ID!
+    //         name: String!
+    //         client: Client!
+    //         deadline: String
+    //     }
 
-        type Query {
-            demands: [Demand]!
-        }
-    `,
-    resolvers: {
-        Query: {
-            demands: () => [],
-        },    
-    },
+    //     type Query {
+    //         demands: [Demand]!
+    //     }
+    // `,
+    resolvers: resolvers,
+    // resolvers: {
+    //     Query: {
+    //         demands: () => [],
+    //     },    
+    // },
 });
-
-server.start();
 
 server.applyMiddleware({
     app,
     cors: {
         origin:'http://localhost:3000',
     },
+    bodyParserConfig: true,
 });
 
 // server.get('/status', (_,response) =>{

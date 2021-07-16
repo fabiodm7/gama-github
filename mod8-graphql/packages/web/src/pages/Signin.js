@@ -41,8 +41,8 @@ export default function Signin(){
             })
         })
             .then((response) => response.json())
-            .then(()=>{
-                console.log('Sucesso')
+            .then((data)=>{
+                console.log('Sucesso',data);
             });
     };
 

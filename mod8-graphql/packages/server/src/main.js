@@ -4,29 +4,65 @@
 // import { parse } from 'querystring';
 
 import express from 'express';
-import cors from 'cors';
+// import cors from 'cors';
+import { ApolloServer, gql } from 'apollo-server-express';
 
-const server = express();
 
-server.get('/status', (_,response) =>{
-    response.send({
-        status: "OK",
-    });
+const app = express();
+
+const server = new ApolloServer({
+    typeDefs: gql`
+        type Client {
+            id: ID!
+            name: String!    
+        }
+
+        type Demand {
+            id: ID!
+            name: String!
+            client: Client!
+            deadline: String
+        }
+
+        type Query {
+            demands: [Demand]!
+        }
+    `,
+    resolvers: {
+        Query: {
+            demands: () => [],
+        },    
+    },
 });
 
-const enableCors = cors({ origin:'http://localhost:3000'});
+server.start();
 
-server
-.options('/authenticate', enableCors)
-.post('/authenticate', enableCors, express.json(), (request,response) =>{
-    console.log(
-        'Email', request.body.email,
-        'Senha', request.body.password,
-    );
-    response.send({
-        ok: true,
-    });
+server.applyMiddleware({
+    app,
+    cors: {
+        origin:'http://localhost:3000',
+    },
 });
+
+// server.get('/status', (_,response) =>{
+//     response.send({
+//         status: "OK",
+//     });
+// });
+
+// const enableCors = cors({ origin:'http://localhost:3000'});
+
+// server
+// .options('/authenticate', enableCors)
+// .post('/authenticate', enableCors, express.json(), (request,response) =>{
+//     console.log(
+//         'Email', request.body.email,
+//         'Senha', request.body.password,
+//     );
+//     response.send({
+//         ok: true,
+//     });
+// });
 
 // // criar o servidor http
 // const server = createServer((request,response) => {
@@ -109,6 +145,6 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT) : 8000;
 const HOSTNAME = process.env.HOSTNAME || '127.0.0.1'
 
 // inicia o servidor
-server.listen(PORT,HOSTNAME, () => {
+app.listen(PORT,HOSTNAME, () => {
     console.log(`listening on http://${HOSTNAME}:${PORT}`);
 });

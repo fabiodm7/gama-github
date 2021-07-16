@@ -1,15 +1,15 @@
 {
-    "name": "mod8-graphql",
-    "version": "1.0.0",
-    "private": true,
-    "main": "src/main.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node -r esm ."
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "esm": "^3.2.25"
-    }
+  "name": "@dev-demands/root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
 }

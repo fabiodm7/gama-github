@@ -1,5 +1,5 @@
 {
-    "name": "mod8-graphql",
+    "name": "@dev-demands/server",
     "version": "1.0.0",
     "private": true,
     "main": "src/main.js",

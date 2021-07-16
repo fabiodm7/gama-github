@@ -1,6 +1,6 @@
 import { createServer } from 'http';
-import { readFile } from 'fs';
-import { resolve } from 'path';
+// import { readFile } from 'fs';
+// import { resolve } from 'path';
 import { parse } from 'querystring';
 
 // criar o servidor http
@@ -19,53 +19,53 @@ const server = createServer((request,response) => {
             response.end();
             break;
         }
-        // rota para home page
-        case '/home': {
-            const path = resolve(__dirname,'./pages/home.html');
-            readFile(path, (error,file) => {
-                if (error) {
-                    response.writeHead(500, 'Não foi possível processar o arquivo html');
-                    response.end();
-                    return;
-                }
-                else {
-                    response.writeHead(200);
-                    response.write(file);
-                    response.end();
-                    return;
-                }
-            }); 
-            break;
-        }
-        // rota para pagina de login
-        case '/signin':{
-            const path = resolve(__dirname,'./pages/signin.html');
-            readFile(path, (error,file) => {
-                if (error) {
-                    response.writeHead(500, 'Não foi possível processar o arquivo html');
-                    response.end();
-                    return;
-                }
-                else {
-                    response.writeHead(200);
-                    response.write(file);
-                    response.end();
-                    return;
-                }
-            }); 
-            break;
-        }
+        // // rota para home page
+        // case '/home': {
+        //     const path = resolve(__dirname,'./pages/home.html');
+        //     readFile(path, (error,file) => {
+        //         if (error) {
+        //             response.writeHead(500, 'Não foi possível processar o arquivo html');
+        //             response.end();
+        //             return;
+        //         }
+        //         else {
+        //             response.writeHead(200);
+        //             response.write(file);
+        //             response.end();
+        //             return;
+        //         }
+        //     }); 
+        //     break;
+        // }
+        // // rota para pagina de login
+        // case '/signin':{
+        //     const path = resolve(__dirname,'./pages/signin.html');
+        //     readFile(path, (error,file) => {
+        //         if (error) {
+        //             response.writeHead(500, 'Não foi possível processar o arquivo html');
+        //             response.end();
+        //             return;
+        //         }
+        //         else {
+        //             response.writeHead(200);
+        //             response.write(file);
+        //             response.end();
+        //             return;
+        //         }
+        //     }); 
+        //     break;
+        // }
         case '/authenticate': {
             let data = '';
             request.on('data', (chunck) => {
                 data += chunck;
             });
             request.on('end', () => {
-                response.writeHead(301,{
-                    location: '/home',
-                });
+                const params = parse(data);
+                // response.writeHead(301,{
+                //     location: '/home',
+                // });
                 response.end();
-                    
             });
             break;
         }

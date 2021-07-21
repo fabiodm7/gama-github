@@ -1,22 +1,32 @@
 // incluindo uma biblioteca
 const http = require('http');
 const url = require('url');
+const queryString = require('query-string');
 
-// definindo o endereço / url
-const hostname = '127.0.0.1';
+// definindo o endereço/url
+const hostname = '127.0.0.1'; // localhost
 const port = 3000;
 
 // implementação da regra de negócio
 const server = http.createServer((req,res) => {
 
     // pegar a pergunta na url
-    console.log(req.url);
+    const params = queryString.parse(url.parse(req.url).search);
+    
     // verificar a pergunta e escolher uma resposta
-    // retornar a resposta escolhida
+    let resposta;
+    if (params.pergunta == 'autor'){
+        resposta = 'Fabio Duarte Medina';
+    } else if (params.pergunta == 'cidade'){
+        resposta = 'Sao Paulo';
+    } else{
+        resposta = 'Sei la meu';
+    }
 
+    // retornar a resposta escolhida
     res.statusCode = 200;
     res.setHeader('Content-Type','text/plain');
-    res.end('Hello World Fabio');
+    res.end(resposta);
 });
 
 // execução

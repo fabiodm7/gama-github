@@ -12,7 +12,7 @@ const port = 3000;
 const server = http.createServer((req,res) => {
 
     let resposta;
-    const urlparse = url.parse(req.url);
+    const urlparse = url.parse(req.url,true);
     // receber informacoes do usuario
     const params = queryString.parse(urlparse.search);
 

@@ -32,21 +32,25 @@ const server = http.createServer((req,res) => {
         }); 
     };
     function buscaUsuario(params){
-        
+        fs.readFile('users/' + params.id + '.json', function(err){
+            resposta = err ? true : false;
+            return resposta;
+        });
     };
     function imprimeUsuario(params){
         
+        let busca = buscaUsuario(params);
         // selecionar usuario
-        fs.readFile('users/' + params.id + '.json', function(err, data) {
-            if (err) {
-                resposta = 'Usuario nao existe';
-                
-                // retornar a resposta escolhida
-                res.statusCode = 200;
-                res.setHeader('Content-Type','text/plain');
-                res.end(resposta);
-            } else {
-    
+        if (busca == false) {
+            resposta = 'Usuario nao existe';
+            
+            // retornar a resposta escolhida
+            res.statusCode = 200;
+            res.setHeader('Content-Type','text/plain');
+            res.end(resposta);
+        } else {
+            
+            fs.readFile('users/' + params.id + '.json', function(err, data) {
                 resposta = data;
                 console.log('Founded! ' + data)
         
@@ -54,9 +58,9 @@ const server = http.createServer((req,res) => {
                 res.statusCode = 200;
                 res.setHeader('Content-Type','application/json');
                 res.end(resposta);
-            }
-        });
-    }
+            });
+        };
+    };
     function apagaUsuario(params){
 
         // apaga usuario
